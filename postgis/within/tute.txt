@@ -1,0 +1,12 @@
+postreges and postgis tute
+1. # this will prompt you for a database password
+* sudo -u postgres createuser -P USER_NAME_HERE
+* sudo -u postgres createdb -O USER_NAME_HERE DATABASE_NAME_HERE
+sud
+* sudo -u postgres psql -c "CREATE EXTENSION postgis; CREATE EXTENSION postgis_topology;" DATABASE_NAME_HERE
+
+* psql -h localhost -U USER_NAME_HERE DATABASE_NAME_HERE
+\timing
+2. wun within.sh
+
+3. in the psql shell run >>\i within.sql

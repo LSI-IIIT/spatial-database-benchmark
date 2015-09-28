@@ -1,0 +1,16 @@
+DROP TABLE lineLayer;
+
+CREATE TABLE lineLayer
+(
+  name character varying,
+  geom geometry
+);
+
+DROP TABLE boxLayer;
+
+CREATE TABLE boxLayer
+(
+  name character varying,
+  geom geometry
+);
+

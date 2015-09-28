@@ -1,0 +1,36 @@
+This is the tutorial to develop and run test cases for within query in postgis.
+
+This tutorial is divided into two sections-
+1. Creating the test case.
+2. Running them on PostGIS to get the query execution time.
+
+Part 1 :
+
+Assumptions/Notes:
+1. In this we are assuming that you have running postgres/postgis on your computer and the database and has postgis extension.
+2. You simply have to run `within.sh` and it will ask you size of both layers:
+	a. The fisrt layer is the number of rows of lines you want in the layer.
+	b. The second layer is the number of rows of boxes you want in the layer.
+3. We are writting all the queries in a single file and execute that file on the sql console and record the time for just within query without any read and write operation.
+
+
+Flow of data:
+1. `misc.txt` contains the queries to drop and recreate the geometry tables in the database.
+2. `line_insert.py`(`line_output.txt`) and `box_insert.py`(`box_output.txt`) will create temp files with the sql queries to store those geometries in the database.
+3. The `within.sh` also asks whether want to index the datasets or, `1` for yes and `0` otherwise. The index queries are stored in `index.txt`.
+4. Finally we have `within.py` that will create with sql queries for `within` functiona and store them in `within_output.txt`
+5. `script.py` stiches them all together and create a within.sql which is to be executed in the postgres console.
+
+Part 2:
+1. Now that we have within.sql file containing all the queries, we will execute the file on the console.
+2. On the timing flag by `\timing` command.
+3. and run the within.sql by command `\i within.sql` in the psql console.
+
+There is no write operation on the above queries`\. To check the query results remove the following comment in `within.py` :
+`#print '''SELECT * FROM lineLayer WHERE  ''' `
+
+Database connectivity:
+	* sudo -u postgres createuser -P  `	USER_NAME`
+	* sudo -u postgres createdb -O  `USER_NAME` `DATABASE_NAME` 
+	* sudo -u postgres psql -c "CREATE EXTENSION postgis; CREATE EXTENSION postgis_topology;" `DATABASE_NAME`
+	* psql -h localhost -U `USER_NAME` `DATABASE_NAME`
