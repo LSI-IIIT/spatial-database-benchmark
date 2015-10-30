@@ -34,5 +34,5 @@ arr[size-1] = "".join(temp_list)
 #code to print to output in a sql file
 for line in arr:
 	print line
-
+	
 #print 'select * from lineLayer;'

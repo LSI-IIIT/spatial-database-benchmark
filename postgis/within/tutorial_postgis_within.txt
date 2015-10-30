@@ -7,7 +7,7 @@ This tutorial is divided into two sections-
 Part 1 :
 
 Assumptions/Notes:
-1. In this we are assuming that you have running postgres/postgis on your computer and the database and has postgis extension.
+1. In this we are assuming that you have running postgres/postgis on your computer and the database has postgis extension.
 2. You simply have to run `within.sh` and it will ask you size of both layers:
 	a. The fisrt layer is the number of rows of lines you want in the layer.
 	b. The second layer is the number of rows of boxes you want in the layer.
@@ -26,7 +26,7 @@ Part 2:
 2. On the timing flag by `\timing` command.
 3. and run the within.sql by command `\i within.sql` in the psql console.
 
-There is no write operation on the above queries`\. To check the query results remove the following comment in `within.py` :
+There is no write operation on the above queries. To check the query results remove the following comment in `within.py` :
 `#print '''SELECT * FROM lineLayer WHERE  ''' `
 
 Database connectivity:
