@@ -1,0 +1,16 @@
+DROP TABLE layer1;
+
+CREATE TABLE layer1
+(
+  name character varying,
+  geom geometry
+);
+
+DROP TABLE layer2;
+
+CREATE TABLE layer2
+(
+  name character varying,
+  geom geometry
+);
+
