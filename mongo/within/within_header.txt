@@ -1,0 +1,8 @@
+conn = new Mongo();
+db.conn.getDB("test");
+
+db = db.getSiblingDB('within');
+
+lineLayer= db.getCollection('lineLayer');
+
+var before =new Date() 

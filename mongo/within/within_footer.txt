@@ -1,0 +1,12 @@
+var after = new Date()
+
+var count =0
+while ( cursor.hasNext() ) {
+	//printjson( cursor.next() );
+	cursor.next()
+    count++;
+}
+
+
+var exec = after-before
+print(count,exec)
