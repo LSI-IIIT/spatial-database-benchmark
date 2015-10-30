@@ -1,0 +1,11 @@
+>> open pgAdmin3
+>> connect to localhost
+>>CREATE TABLE layer2
+(
+  name character varying,
+  geom geometry
+);
+
+>>CREATE INDEX idx
+  ON layer2
+  USING GIST (geom);
