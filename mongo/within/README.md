@@ -9,7 +9,7 @@ _Here we are trying to find out the time taken to calculate the within query (li
 2. Creating the within query on MongoDb to get the query execution time.
 3. Running the query.
 
-***
+ 	***
 
 _Assumptions/Notes:_
 
@@ -43,7 +43,7 @@ _Assumptions/Notes:_
 
 ***
 ###PART 3 Running the query
-Then we call the within.js file from the console which prints the time taken by the query to execute. This step is the second part of the tutorial.
+Then we call the within.js file from the console which prints the time taken by the query to execute. 
 
 ***
 **Database connectivity:**
