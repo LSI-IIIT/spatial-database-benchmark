@@ -1,0 +1,15 @@
+conn = new Mongo();
+db.conn.getDB("test");
+
+db = db.getSiblingDB('intersect');
+
+layer1= db.getCollection('layer1');
+layer2= db.getCollection('layer2');
+
+var count =0
+var before =new Date() 
+db.layer1.createIndex( { geometry : "2dsphere" } )
+db.layer2.createIndex( { geometry : "2dsphere" } )
+
+var count =0
+var before =new Date() 

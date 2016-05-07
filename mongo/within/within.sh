@@ -22,9 +22,11 @@ else
 	echo "Box Layer not disturbed"
 fi
 
-#!opens the box layer and tailor it to a text file which contains only the geometry which will be inserted into within.js file
-#! the layer contains coordinates for each box
-python within.py > within_output.txt
+#following 3 lines of code is not needed any more
+### !opens the box layer and tailor it to a text file which contains only the geometry which will be inserted into within.js file
+### ! the layer contains coordinates for each box
+### python within.py > within_output.txt
+
 
 #! stich everything together into a js file which will give the reult
 echo  "press 0 for non index"

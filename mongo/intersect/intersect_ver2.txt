@@ -1,0 +1,13 @@
+db.layer1.find({}, {
+	"_id":0 ,
+	"geometry":1
+}).forEach(function(x){   
+	db.layer2.find( {
+		geometry:{
+			$geoIntersects:{
+				$geometry:
+				x.geometry
+			}
+		}
+	})  
+})

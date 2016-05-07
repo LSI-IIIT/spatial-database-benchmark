@@ -4,5 +4,10 @@ db.conn.getDB("test");
 db = db.getSiblingDB('within');
 
 lineLayer= db.getCollection('lineLayer');
+boxLayer= db.getCollection('boxLayer');
+
 db.lineLayer.createIndex( { geometry : "2dsphere" } )
+db.boxLayer.createIndex( { geometry : "2dsphere" } )
+
+var count=0;
 var before =new Date() 
