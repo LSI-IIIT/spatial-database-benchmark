@@ -44,6 +44,7 @@ _Assumptions/Notes:_
 ***
 ###PART 3 Running the query
 Then we call the within.js file from the console which prints the time taken by the query to execute. 
+`>mongo within.js`
 
 ***
 **Database connectivity:**
