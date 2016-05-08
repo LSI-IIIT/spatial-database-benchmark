@@ -29,25 +29,30 @@ _Assumptions/Notes:_
 
 ###PART 1 Creating the dataset
 
-On Running `intersect.sh` the following will the flow
+**On Running `intersect.sh` the following will the flow**
 
 1. It will ask for `layer_1_size`, then it will run `layer1.py` and create a intermediate file `layer1_out.txt` with the sql queries to create a table called `layer1` with line geometries in the database.
 2. Same happens for `layer2`
 3. If you don't want to change the existing table in the database, enter the `layer_size 0` when asked by `intersect.sh`
-3. `intersect.sh` also asks whether want to index the datasets or, `1` for yes and `0` otherwise. The index queries are stored in another intermediate file `index.txt`.
+4. `intersect.sh` also asks whether want to index the datasets or, `1` for yes and `0` otherwise. The index queries are stored in another intermediate file `index.txt`.
 
 ###PART 2 Creating the query
-4. The intersection query is stored in `intersect_out_ver2.txt`
-5. `script.py` stitches the files them all the intermediate text files together and create a sql file `intersect.sql` which is to be executed in the postgres console.
+
+1. The intersection query is stored in `intersect_out_ver2.txt`
+2. `script.py` stitches the files them all the intermediate text files together and create a sql file `intersect.sql` which is to be executed in the postgres console.
 
 ###Part 3 Running the query:
 
-1. Now that we have intersect.sql file containing all the queries, we will execute the file on the console.
-2. On the timing flag by `\timing` command.
-3. and run the intersect.sql by command `\i intersect.sql` in the psql console.
+1. Now that we have `intersect.sql` file containing all the queries, we will execute the file on the console.
+2. Login to the `psql` command line. 
+2. Turn On the timing flag by `\timing` command in `psql` command line .
+3. And run the `intersect.sql` by command `\i intersect.sql` in the `psql` console.
 
-There is no write operation on the above queries. To check the query results remove the following comment in `intersect.py` :
-`#print '''SELECT * FROM lineLayer WHERE  ''' `
+***
+
+###NOTE : 
+
+There is no write operation on the above queries. To check the query results replace `Select null from` in `intersect_out_ver2.txt` with `Select * from`
 
 ***
 
