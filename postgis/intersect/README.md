@@ -27,7 +27,7 @@ _Assumptions/Notes:_
 
 ***
 
-###PART 1 Creating the dataset
+###Part 1 Creating the dataset
 
 **On Running `intersect.sh` the following will the flow**
 
@@ -36,7 +36,7 @@ _Assumptions/Notes:_
 3. If you don't want to change the existing table in the database, enter the `layer_size 0` when asked by `intersect.sh`
 4. `intersect.sh` also asks whether want to index the datasets or, `1` for yes and `0` otherwise. The index queries are stored in another intermediate file `index.txt`.
 
-###PART 2 Creating the query
+###Part 2 Creating the query
 
 1. The intersection query is stored in `intersect_out_ver2.txt`
 2. `script.py` stitches the files them all the intermediate text files together and create a sql file `intersect.sql` which is to be executed in the postgres console.
