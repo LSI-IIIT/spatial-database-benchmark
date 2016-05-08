@@ -24,7 +24,7 @@ while(diff<=no_records):
 		str(x) +' '+str(y) +
 		'''))'),''')
 	
-	diff = diff + 0.01
+	diff = diff + 1.0
 
 
 ## code to delete comma and insert semicolon at the end of the file

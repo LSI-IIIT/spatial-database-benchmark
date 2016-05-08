@@ -1,0 +1,5 @@
+select null from 
+	lineLayer as a 
+		JOIN 
+			boxLayer as b 
+				ON ST_Within(a.geom,b.geom)

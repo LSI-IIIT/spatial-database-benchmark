@@ -10,7 +10,7 @@ else
 	echo "Line Layer not diturbed"
 fi
 
-#!takes input of box layer size and creates a table of boxs
+#!takes input of box layer size and creates a table of boxes
 echo -n "Enter Box  Layer size > "
 read box_layer_size
 if [ "$box_layer_size" != "0" ]
@@ -20,9 +20,12 @@ else
 	echo "Box Layer not disturbed"
 fi
 
-python within.py > within_output.txt
+#not needed anymore
+# #sql within query
+# #python within.py > within_output.txt
 
 echo  "press 0 for non index"
 echo  "press 1 for index"
 read choice
+
 python script.py $choice > within.sql

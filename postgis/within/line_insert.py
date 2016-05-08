@@ -11,15 +11,15 @@ arr=[]
 while(y<=no_records):
 	
 	if(y%2 == 0):
-		x=0.001
+		x=1
 	else:
-		x=0.002
+		x=2
 		
 	diff = math.ceil(y/2)
 	while(x +  math.ceil(diff)<=no_records):
 		arr.append(''' ('Linestring','LINESTRING(''' + str(x) +' '+str(y) +','+ str(x+diff) +' '+str(y)+ ''')'),''')
 		x = x + math.ceil(diff*2)	
-	y = y+0.001
+	y = y+1
 
 
 ## code to delete comma and insert semicolon at the end of the file
