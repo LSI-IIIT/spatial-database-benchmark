@@ -7,7 +7,7 @@ _Here we are trying to find out the time taken to calculate the Intersect query 
 
 1. Creating the dataset.
 2. Creating the intersect query.
-2. Running them on PostGIS to get the query execution time.
+2. Running the query on PostGIS to get the query execution time.
 
 ***
 
@@ -21,9 +21,11 @@ _Assumptions/Notes:_
 
 		b. The second layer is the **number of rows ** of vertical lines you want in the layer.
 
+		c. `intersect.sh` also asks whether we want to index the datasets or, `1` for yes and `0` otherwise. 
+
 3. `intersect.sh` on successful completion will create a file named `intersect.sql`
 
-4. We are writing all the queries(including `create` and `ST_Intersects`  queries) in a single file `intersect.sql` and execute that file on the sql console and record the time for `ST_Intersects` query without any read and write operation.
+4. We are writing all the queries(including `create` and `ST_Intersects`  queries) in a single file `intersect.sql` and execute that file on the psql console and record the time for `ST_Intersects` query without any read and write operation.
 
 ***
 
@@ -39,14 +41,14 @@ _Assumptions/Notes:_
 ###Part 2 Creating the query
 
 1. The intersection query is stored in `intersect_out_ver2.txt`
-2. `script.py` stitches the files them all the intermediate text files together and create a sql file `intersect.sql` which is to be executed in the postgres console.
+2. `script.py` stitches all the intermediate text files together and create a sql file `intersect.sql` which is to be executed in the postgres console.
 
 ###Part 3 Running the query:
 
 1. Now that we have `intersect.sql` file containing all the queries, we will execute the file on the console.
 2. Login to the `psql` command line. 
-2. Turn On the timing flag by `\timing` command in `psql` command line .
-3. And run the `intersect.sql` by command `\i intersect.sql` in the `psql` console.
+3. Turn On the timing flag by `\timing` command in `psql` command line .
+4. And run the `intersect.sql` by command `\i intersect.sql` in the `psql` console.
 
 ***
 

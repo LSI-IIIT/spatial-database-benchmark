@@ -1,11 +1,11 @@
-# This is the tutorial to develop and run test cases for Intersect query in mongoDB.
+# This is the tutorial to develop and run test cases for Intersection query in mongoDB.
 _Here we are trying to find out the time taken to calculate the Intersect query (horizontal lines intersecting with vertical line )_
 
 ***
 
 **This tutorial is divided into three sections-**
 
-1. Creating the test case.
+1. Creating the dataset.
 2. Creating the intersect query on MongoDb to get the query execution time.
 3. Running the query.
 
@@ -27,9 +27,11 @@ _Assumptions/Notes:_
 ***
 
 ###PART 1 Creating the dataset
+**On Running `intersect.sh` the following will the flow**
 
-1. `layer1_insert.js`(`layer1_output.txt`) will create `layer1` table in DB which will contain all the horizontal lines.
-2. `layer2_insert.js`(`layer2_output.txt`) will create `layer2` table in DB which will contain all the vertical lines.
+1. It will ask for `Layer1_size`, and run `layer1_insert.js`(`layer1_output.txt`) which will create `layer1` table in DB which will contain all the horizontal lines.
+2. It will then ask for `layer2_size` and run `layer2_insert.js`(`layer2_output.txt`)which will create `layer2` table in DB which will contain all the vertical lines.
+3. If you don't want to change the existing table in the database, enter the `layer_size 0` when asked by `intersect.sh`
 
 ***
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 
 #! takes input of layer1 size and creates a table of layer1
 echo -n "Enter Layer1 size > "
@@ -21,7 +21,7 @@ else
 fi
 
 #not needed anymore
-# #create sql for intersect query
+# #sql intersect query
 # python intersect.py > intersect_out.txt
 
 echo  "press 0 for non index"

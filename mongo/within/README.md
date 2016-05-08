@@ -27,10 +27,11 @@ _Assumptions/Notes:_
 ***
 
 ###PART 1 Creating the dataset
+**On Running `within.sh` the following will the flow**
 
-1. `line_insert.js`(`line_output.txt`) will create `lineLayer` table in DB which will contain all the horizontal lines.
-2. `box_insert.js`(`box_output.txt`) will create `boxLayer` table in DB which will contain all the boxes on incremental size starting from origin.
-
+1. It will ask for `layer_Layer_size`, and run `line_insert.js`(`line_output.txt`) which will create `lineLayer` table in DB which will contain all the horizontal lines.
+2. It will then ask for `box_layer_size` and run `box_insert.js`(`box_output.txt`) which will create `boxLayer` table in DB which will contain all the boxes on incremental size starting from origin.
+3. If you don't want to change the existing table in the database, enter the `layer_size 0` when asked by `within.sh`
 ***
 
 ###PART 2 Creating the query
