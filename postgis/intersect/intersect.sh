@@ -7,7 +7,7 @@ if [ "$layer1_size" != "0" ]
 then
 	python layer1.py $layer1_size > layer1_out.txt
 else 
-	echo "Layer1 not diturbed"
+	echo "Layer1 not disturbed"
 fi
 
 #!takes input of layer2 size and creates a table of layer2
@@ -17,13 +17,15 @@ if [ "$layer2_size" != "0" ]
 then
 	python layer2.py  $layer2_size > layer2_out.txt
 else
-	echo "Box Layer not disturbed"
+	echo "Layer2 not disturbed"
 fi
 
-#create sql for intersect query
-python intersect.py > intersect_out.txt
+#not needed anymore
+# #create sql for intersect query
+# python intersect.py > intersect_out.txt
 
 echo  "press 0 for non index"
 echo  "press 1 for index"
 read choice
-python script.py $choice > intersect.sql
+
+python script.py $choice $layer1_size $layer2_size > intersect_$layer1_size"_"$layer2_size"_"$choice.sql

@@ -1,0 +1,5 @@
+select null from 
+	layer1 as a 
+		JOIN 
+			layer2 as b 
+				ON ST_Intersects(a.geom,b.geom)
