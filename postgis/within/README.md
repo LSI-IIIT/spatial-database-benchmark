@@ -28,7 +28,7 @@ _Assumptions/Notes:_
 
 ###Part 1 Creating the dataset
 
-**On Running `intersect.sh` the following will the flow**
+**On Running `within.sh` the following will the flow**
 
 1. It will ask for `Line_layer_size`, then it will run `line_insert.py` and create a intermediate file `line_output.txt` with the sql queries to create a table called `lineLayer` with line geometries in the database.
 2. Same happens for `boxLayer`
