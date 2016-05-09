@@ -60,6 +60,6 @@ There is no write operation on the above queries. To check the query results rep
 	* >sudo -u postgres psql -c "CREATE EXTENSION postgis; CREATE EXTENSION postgis_topology;" `DATABASE_NAME`
 	* >psql -h localhost -U `USER_NAME` `DATABASE_NAME`
 
-
+```
 **&copy; All rights Reserved | Lab for Spatial Informatics | International Institute of Information Technology Hyderabad **
 _Please give the reference to the paper if using the dataset_
